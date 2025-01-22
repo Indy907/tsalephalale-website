@@ -3,125 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSA Lephalale Original - News</title>
+    <title>TSA LEPHALALE ORIGINAL</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
-
         header {
-            background-color: #ffa500;
+            background-color: #FFD700; /* Yellow */
+            color: #1E90FF; /* Blue */
             padding: 20px 10px;
             text-align: center;
         }
-
-        header img {
-            max-width: 150px;
-            display: block;
-            margin: 0 auto;
-        }
-
         header h1 {
-            color: #222;
-            font-size: 28px;
-            margin: 10px 0 5px;
+            margin: 0;
+            font-size: 2.5rem;
         }
-
-        header p {
-            color: #555;
-            font-size: 14px;
+        .datetime {
+            font-size: 1rem;
+            margin-top: 5px;
         }
-
         nav {
-            background: #333;
+            background-color: #1E90FF; /* Blue */
             padding: 10px;
             text-align: center;
         }
-
         nav a {
-            color: white;
-            margin: 0 15px;
+            color: #FFD700; /* Yellow */
             text-decoration: none;
-            font-size: 16px;
+            margin: 0 15px;
+            font-size: 1.2rem;
         }
-
         nav a:hover {
             text-decoration: underline;
         }
-
-        .content {
-            max-width: 1200px;
-            margin: 20px auto;
+        .container {
             padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
         .news-article {
+            background-color: #fff;
             margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .news-article h2 {
-            color: #333;
+            color: #1E90FF; /* Blue */
         }
-
         .news-article p {
-            color: #666;
             line-height: 1.6;
         }
-
         footer {
-            background: #222;
-            color: white;
+            background-color: #FFD700; /* Yellow */
+            color: #1E90FF; /* Blue */
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
         }
-
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
     </style>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('en-US', options);
+        }
+        setInterval(updateDateTime, 1000);
+        window.onload = updateDateTime;
+    </script>
 </head>
 <body>
     <header>
-        <img src="/mnt/data/IMG_4824.PNG" alt="TSA Lephalale Original Logo">
-        <h1>Breaking News - TSA Lephalale Original</h1>
-        <p>Connect with your community</p>
+        <h1>TSA LEPHALALE ORIGINAL</h1>
+        <div class="datetime" id="datetime"></div>
     </header>
-
     <nav>
         <a href="#">Home</a>
-        <a href="#">Local News</a>
-        <a href="#">Events</a>
+        <a href="#">News</a>
+        <a href="#">Sports</a>
         <a href="#">Contact</a>
+        <a href="#">About</a>
     </nav>
-
-    <div class="content">
+    <div class="container">
         <div class="news-article">
-            <h2>Headline 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed sit amet risus lorem. Donec venenatis justo id sapien dapibus, vitae auctor augue accumsan.</p>
+            <h2>Breaking News: Lephalale Developments</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo eros a lorem pulvinar, sit amet condimentum lorem dapibus.</p>
         </div>
-
         <div class="news-article">
-            <h2>Headline 2</h2>
-            <p>Ut tristique venenatis augue, vel suscipit lacus ultricies nec. Praesent gravida elementum urna, a tincidunt velit dignissim id.</p>
-        </div>
-
-        <div class="news-article">
-            <h2>Headline 3</h2>
-            <p>Aliquam erat volutpat. Quisque consequat lorem ac eros aliquam, sit amet feugiat felis gravida.</p>
+            <h2>Community Spotlight: Local Heroes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel libero euismod, volutpat libero id, tincidunt nulla.</p>
         </div>
     </div>
-
     <footer>
-        <p>&copy; 2025 TSA Lephalale Original. All rights reserved.</p>
+        <p>&copy; 2025 TSA LEPHALALE ORIGINAL. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
